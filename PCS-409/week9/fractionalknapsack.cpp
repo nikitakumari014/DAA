@@ -4,11 +4,11 @@ struct item
 {
     int value;
     int wt;
-    item(int value , int wt)
-    {
-        this->value = value;
-        this->wt = wt;
-    }
+    // item(int value , int wt)
+    // {
+    //     this->value = value;
+    //     this->wt = wt;
+    // }
 };
 bool cmp(item a, item b)
 {
@@ -36,10 +36,20 @@ double fractional_knapsack(int total_w, item arr[], int n)
 int main()
 {
     int n;
-    item arr[] = {{6,6},{2,10},{1,3},{8,5},{3,1},{5,3}};
+    cin >> n;
+    item arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i].wt;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i].value;
+    }
+    // item arr[] = {{6,6},{2,10},{1,3},{8,5},{3,1},{5,3}};
     int weight;
     cin >> weight;
-    n = sizeof(arr) / sizeof(arr[0]);
+    // n = sizeof(arr) / sizeof(arr[0]);
     double value  = fractional_knapsack(weight,arr,n);
     cout<<"Maximum value : "<<value<<endl;
     return 0;

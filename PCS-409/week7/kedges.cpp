@@ -1,12 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define v 4
-int min(int a,int b)
-{
-    if(a < b)
-    return a;
-    else return b;
-}
 int shortestpath(int graph[v][v],int src,int dest,int k)
 {
     if(k==0 && src == dest) return 0;
